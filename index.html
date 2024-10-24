@@ -6,7 +6,7 @@
 <title>n3xus Class Annoyer</title>
 <style>
 body {
-    background-color: hotpink;
+    background-color: black; /* Changed to black */
     color: neonyellow;
     font-family: Arial, sans-serif;
     overflow: hidden;
@@ -20,6 +20,21 @@ body {
     font-size: 20px;
     position: relative;
     z-index: 10; /* Ensure text is above stars */
+    text-align: center; /* Center the text */
+    margin-top: 20px; /* Add margin for spacing */
+}
+
+button {
+    position: absolute;
+    bottom: 20px; /* Position button at the bottom */
+    left: 50%;
+    transform: translateX(-50%); /* Center the button */
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: neonyellow;
+    border: none;
+    cursor: pointer;
+    z-index: 10; /* Ensure button is above stars */
 }
 
 .stars {
@@ -43,11 +58,6 @@ body {
 @keyframes twinkle {
     0% { transform: scale(1); }
     100% { transform: scale(1.5); opacity: 0; }
-}
-
-@keyframes move {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(100vh); }
 }
 </style>
 </head>
