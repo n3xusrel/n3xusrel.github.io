@@ -6,7 +6,7 @@
 <title>n3xus Class Annoyer</title>
 <style>
 body {
-    background-color: black; /* Changed to black */
+    background-color: black;
     color: neonyellow;
     font-family: Arial, sans-serif;
     overflow: hidden;
@@ -17,24 +17,26 @@ body {
 }
 
 .text {
-    font-size: 20px;
-    position: relative;
-    z-index: 10; /* Ensure text is above stars */
-    text-align: center; /* Center the text */
-    margin-top: 20px; /* Add margin for spacing */
+    font-size: 24px;
+    color: purple;
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
 }
 
 button {
     position: absolute;
-    bottom: 20px; /* Position button at the bottom */
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%); /* Center the button */
+    transform: translate(-50%, -50%);
     padding: 10px 20px;
     font-size: 16px;
-    background-color: neonyellow;
+    background-color: gray;
     border: none;
     cursor: pointer;
-    z-index: 10; /* Ensure button is above stars */
+    z-index: 10;
 }
 
 .stars {
@@ -44,7 +46,7 @@ button {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    z-index: 1; /* Behind the text */
+    z-index: 1;
 }
 
 .star {
@@ -63,10 +65,10 @@ button {
 </head>
 <body>
 <div class="stars" id="stars"></div>
-<div class="text">n3xus Annoyer</div>
+<div class="text">n3xus Class Annoyer</div>
 <button onclick="playAudio()">Annoy Class!!!!!!</button>
 
-<audio id="audio" src="https://n3xusrel.github.io/music.mp3"></audio>
+<audio id="audio" src="https://sigmaondawall.github.io/toes/music.mp3"></audio>
 
 <script>
 function playAudio() {
@@ -76,16 +78,16 @@ function playAudio() {
 
 function createStars() {
     const starsContainer = document.getElementById('stars');
-    const numStars = 100; // Adjust the number of stars
+    const numStars = 100;
     for (let i = 0; i < numStars; i++) {
         const star = document.createElement('div');
         star.className = 'star';
-        const size = Math.random() * 5 + 2; // Random size between 2 and 7
+        const size = Math.random() * 5 + 2;
         star.style.width = size + 'px';
         star.style.height = size + 'px';
-        star.style.top = Math.random() * 100 + 'vh'; // Random vertical position
-        star.style.left = Math.random() * 100 + 'vw'; // Random horizontal position
-        star.style.animationDuration = Math.random() * 1 + 1 + 's'; // Random animation duration
+        star.style.top = Math.random() * 100 + 'vh';
+        star.style.left = Math.random() * 100 + 'vw';
+        star.style.animationDuration = Math.random() * 1 + 1 + 's';
         starsContainer.appendChild(star);
     }
 }
